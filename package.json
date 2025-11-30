@@ -1,0 +1,40 @@
+{
+	"name": "vscode-neocomp-ext",
+	"version": "0.0.1",
+	"description": "vscode plugin for neocomp",
+	"author": "aliibrahim123",
+	"license": "MIT",
+	"main": "index.js",
+	"activationEvents": [ "onLanguage:javascript", "onLanguage:typescript" ],
+	"engines": {
+		"vscode": "^1.60.0"
+	},
+	"type": "commonjs",
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"grammars": [
+			{
+				"scopeName": "inline.temp-html",
+				"path": "./syntaxes/temp-html.json",
+				"injectTo": [
+					"source.js",
+					"source.ts"
+				]
+			}
+		],
+		"typescriptServerPlugins": [
+			{
+				"name": "vscode-neocomp",
+				"enableForWorkspaceTypeScriptVersions": true
+			}
+		]
+	},
+	"dependencies": {
+		"vscode-neocomp": "file:.",
+		"typescript": "^5.9.3",
+		"typescript-template-language-service-decorator": "^2.3.2",
+		"vscode-html-languageservice": "^5.6.0"
+	}
+}
