@@ -7,11 +7,11 @@
 			"begin": "(\\$temp)\\s*(`)",
 			"beginCaptures": {
 				"1": { "name": "entity.name.function.tagged-template.ts" },
-				"2": { "name": "punctuation.definition.string.template.begin.ts" }
+				"2": { "name": "string.template.ts punctuation.definition.string.template.begin.ts" }
 			},
 			"end": "`",
 			"endCaptures": {
-				"0": { "name": "punctuation.definition.string.template.end.ts" }
+				"0": { "name": "string.template.js punctuation.definition.string.template.end.ts" }
 			},
 			"contentName": "meta.embedded.block.html",
 			"patterns": [
@@ -40,7 +40,7 @@
 				"1": { "name": "punctuation.definition.tag.begin.html" },
 				"2": { "name": "entity.name.tag.html" }
 			},
-			"end": "(/?>)",
+			"end": "(/?>)|(\\s(?=`))",
 			"endCaptures": {
 				"1": { "name": "punctuation.definition.tag.end.html" }
 			},
@@ -56,7 +56,7 @@
 			"beginCaptures": { 
 				"0": { "name": "entity.other.attribute-name.html" } 
 			},
-			"end": "(?=\\s*+[^=\\s])",
+			"end": "(?=\\s*+[^=`\\s])",
 			"patterns": [{
 				"begin": "=",
 				"beginCaptures": { "name": "punctuation.separator.key-value.html" },
