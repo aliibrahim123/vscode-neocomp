@@ -4,7 +4,7 @@
 	"patterns": [{ "include": "#temp-tag" }],
 	"repository": {
 		"temp-tag": {
-			"begin": "(\\$temp)\\s*(`)",
+			"begin": "(\\$temp|\\$chunk)\\s*(`)",
 			"beginCaptures": {
 				"1": { "name": "entity.name.function.tagged-template.ts" },
 				"2": { "name": "string.template.ts punctuation.definition.string.template.begin.ts" }

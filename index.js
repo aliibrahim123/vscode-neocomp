@@ -22597,7 +22597,7 @@ module.exports = (mod) => {
         info.project,
         new HtmlTemplateLanguageService(),
         {
-          tags: ["$temp"],
+          tags: ["$temp", "$chunk"],
           enableForStringWithSubstitutions: true
         }
       );
