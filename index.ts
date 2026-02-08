@@ -79,7 +79,7 @@ export = (mod: { typescript: typeof ts }) => {
                 info.project,
                 new HtmlTemplateLanguageService(),
                 {
-                    tags: ['$temp', '$chunk'], 
+                    tags: ['html', '$chunk'], 
                     enableForStringWithSubstitutions: true
                 }
             );

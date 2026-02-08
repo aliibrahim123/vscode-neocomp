@@ -6240,7 +6240,7 @@ var legacy_beautify_css;
     ,
     /* 2 */
     /***/
-    function(module2) {
+    (function(module2) {
       function OutputLine(parent) {
         this.__parent = parent;
         this.__character_count = 0;
@@ -6557,13 +6557,13 @@ var legacy_beautify_css;
         }
       };
       module2.exports.Output = Output;
-    },
+    }),
     ,
     ,
     ,
     /* 6 */
     /***/
-    function(module2) {
+    (function(module2) {
       function Options(options, merge_child_field) {
         this.raw_options = _mergeOpts(options, merge_child_field);
         this.disabled = this._get_boolean("disabled");
@@ -6683,11 +6683,11 @@ var legacy_beautify_css;
       module2.exports.Options = Options;
       module2.exports.normalizeOpts = _normalizeOpts;
       module2.exports.mergeOpts = _mergeOpts;
-    },
+    }),
     ,
     /* 8 */
     /***/
-    function(module2) {
+    (function(module2) {
       var regexp_has_sticky = RegExp.prototype.hasOwnProperty("sticky");
       function InputScanner(input_string) {
         this.__input = input_string || "";
@@ -6816,14 +6816,14 @@ var legacy_beautify_css;
         return start >= testVal.length && this.__input.substring(start - testVal.length, start).toLowerCase() === testVal;
       };
       module2.exports.InputScanner = InputScanner;
-    },
+    }),
     ,
     ,
     ,
     ,
     /* 13 */
     /***/
-    function(module2) {
+    (function(module2) {
       function Directives(start_block_pattern, end_block_pattern) {
         start_block_pattern = typeof start_block_pattern === "string" ? start_block_pattern : start_block_pattern.source;
         end_block_pattern = typeof end_block_pattern === "string" ? end_block_pattern : end_block_pattern.source;
@@ -6848,11 +6848,11 @@ var legacy_beautify_css;
         return input.readUntilAfter(this.__directives_end_ignore_pattern);
       };
       module2.exports.Directives = Directives;
-    },
+    }),
     ,
     /* 15 */
     /***/
-    function(module2, __unused_webpack_exports, __webpack_require__2) {
+    (function(module2, __unused_webpack_exports, __webpack_require__2) {
       var Beautifier = __webpack_require__2(16).Beautifier, Options = __webpack_require__2(17).Options;
       function css_beautify2(source_text, options) {
         var beautifier = new Beautifier(source_text, options);
@@ -6862,10 +6862,10 @@ var legacy_beautify_css;
       module2.exports.defaultOptions = function() {
         return new Options();
       };
-    },
+    }),
     /* 16 */
     /***/
-    function(module2, __unused_webpack_exports, __webpack_require__2) {
+    (function(module2, __unused_webpack_exports, __webpack_require__2) {
       var Options = __webpack_require__2(17).Options;
       var Output = __webpack_require__2(2).Output;
       var InputScanner = __webpack_require__2(8).InputScanner;
@@ -7266,10 +7266,10 @@ var legacy_beautify_css;
         return sweetCode;
       };
       module2.exports.Beautifier = Beautifier;
-    },
+    }),
     /* 17 */
     /***/
-    function(module2, __unused_webpack_exports, __webpack_require__2) {
+    (function(module2, __unused_webpack_exports, __webpack_require__2) {
       var BaseOptions = __webpack_require__2(6).Options;
       function Options(options) {
         BaseOptions.call(this, options, "css");
@@ -7289,7 +7289,7 @@ var legacy_beautify_css;
       }
       Options.prototype = new BaseOptions();
       module2.exports.Options = Options;
-    }
+    })
     /******/
   ];
   var __webpack_module_cache__ = {};
@@ -7324,7 +7324,7 @@ var legacy_beautify_html;
     ,
     /* 2 */
     /***/
-    function(module2) {
+    (function(module2) {
       function OutputLine(parent) {
         this.__parent = parent;
         this.__character_count = 0;
@@ -7641,10 +7641,10 @@ var legacy_beautify_html;
         }
       };
       module2.exports.Output = Output;
-    },
+    }),
     /* 3 */
     /***/
-    function(module2) {
+    (function(module2) {
       function Token(type, text, newlines, whitespace_before) {
         this.type = type;
         this.text = text;
@@ -7659,12 +7659,12 @@ var legacy_beautify_html;
         this.directives = null;
       }
       module2.exports.Token = Token;
-    },
+    }),
     ,
     ,
     /* 6 */
     /***/
-    function(module2) {
+    (function(module2) {
       function Options(options, merge_child_field) {
         this.raw_options = _mergeOpts(options, merge_child_field);
         this.disabled = this._get_boolean("disabled");
@@ -7784,11 +7784,11 @@ var legacy_beautify_html;
       module2.exports.Options = Options;
       module2.exports.normalizeOpts = _normalizeOpts;
       module2.exports.mergeOpts = _mergeOpts;
-    },
+    }),
     ,
     /* 8 */
     /***/
-    function(module2) {
+    (function(module2) {
       var regexp_has_sticky = RegExp.prototype.hasOwnProperty("sticky");
       function InputScanner(input_string) {
         this.__input = input_string || "";
@@ -7917,10 +7917,10 @@ var legacy_beautify_html;
         return start >= testVal.length && this.__input.substring(start - testVal.length, start).toLowerCase() === testVal;
       };
       module2.exports.InputScanner = InputScanner;
-    },
+    }),
     /* 9 */
     /***/
-    function(module2, __unused_webpack_exports, __webpack_require__2) {
+    (function(module2, __unused_webpack_exports, __webpack_require__2) {
       var InputScanner = __webpack_require__2(8).InputScanner;
       var Token = __webpack_require__2(3).Token;
       var TokenStream = __webpack_require__2(10).TokenStream;
@@ -8010,10 +8010,10 @@ var legacy_beautify_html;
       };
       module2.exports.Tokenizer = Tokenizer;
       module2.exports.TOKEN = TOKEN;
-    },
+    }),
     /* 10 */
     /***/
-    function(module2) {
+    (function(module2) {
       function TokenStream(parent_token) {
         this.__tokens = [];
         this.__tokens_length = this.__tokens.length;
@@ -8054,10 +8054,10 @@ var legacy_beautify_html;
         this.__tokens_length += 1;
       };
       module2.exports.TokenStream = TokenStream;
-    },
+    }),
     /* 11 */
     /***/
-    function(module2, __unused_webpack_exports, __webpack_require__2) {
+    (function(module2, __unused_webpack_exports, __webpack_require__2) {
       var Pattern = __webpack_require__2(12).Pattern;
       function WhitespacePattern(input_scanner, parent) {
         Pattern.call(this, input_scanner, parent);
@@ -8121,10 +8121,10 @@ var legacy_beautify_html;
         return result;
       };
       module2.exports.WhitespacePattern = WhitespacePattern;
-    },
+    }),
     /* 12 */
     /***/
-    function(module2) {
+    (function(module2) {
       function Pattern(input_scanner, parent) {
         this._input = input_scanner;
         this._starting_pattern = null;
@@ -8180,10 +8180,10 @@ var legacy_beautify_html;
       Pattern.prototype._update = function() {
       };
       module2.exports.Pattern = Pattern;
-    },
+    }),
     /* 13 */
     /***/
-    function(module2) {
+    (function(module2) {
       function Directives(start_block_pattern, end_block_pattern) {
         start_block_pattern = typeof start_block_pattern === "string" ? start_block_pattern : start_block_pattern.source;
         end_block_pattern = typeof end_block_pattern === "string" ? end_block_pattern : end_block_pattern.source;
@@ -8208,10 +8208,10 @@ var legacy_beautify_html;
         return input.readUntilAfter(this.__directives_end_ignore_pattern);
       };
       module2.exports.Directives = Directives;
-    },
+    }),
     /* 14 */
     /***/
-    function(module2, __unused_webpack_exports, __webpack_require__2) {
+    (function(module2, __unused_webpack_exports, __webpack_require__2) {
       var Pattern = __webpack_require__2(12).Pattern;
       var template_names = {
         django: false,
@@ -8360,13 +8360,13 @@ var legacy_beautify_html;
         return resulting_string;
       };
       module2.exports.TemplatablePattern = TemplatablePattern;
-    },
+    }),
     ,
     ,
     ,
     /* 18 */
     /***/
-    function(module2, __unused_webpack_exports, __webpack_require__2) {
+    (function(module2, __unused_webpack_exports, __webpack_require__2) {
       var Beautifier = __webpack_require__2(19).Beautifier, Options = __webpack_require__2(20).Options;
       function style_html(html_source, options, js_beautify2, css_beautify2) {
         var beautifier = new Beautifier(html_source, options, js_beautify2, css_beautify2);
@@ -8376,10 +8376,10 @@ var legacy_beautify_html;
       module2.exports.defaultOptions = function() {
         return new Options();
       };
-    },
+    }),
     /* 19 */
     /***/
-    function(module2, __unused_webpack_exports, __webpack_require__2) {
+    (function(module2, __unused_webpack_exports, __webpack_require__2) {
       var Options = __webpack_require__2(20).Options;
       var Output = __webpack_require__2(2).Output;
       var Tokenizer = __webpack_require__2(21).Tokenizer;
@@ -9011,10 +9011,10 @@ var legacy_beautify_html;
         return result;
       };
       module2.exports.Beautifier = Beautifier;
-    },
+    }),
     /* 20 */
     /***/
-    function(module2, __unused_webpack_exports, __webpack_require__2) {
+    (function(module2, __unused_webpack_exports, __webpack_require__2) {
       var BaseOptions = __webpack_require__2(6).Options;
       function Options(options) {
         BaseOptions.call(this, options, "html");
@@ -9134,10 +9134,10 @@ var legacy_beautify_html;
       }
       Options.prototype = new BaseOptions();
       module2.exports.Options = Options;
-    },
+    }),
     /* 21 */
     /***/
-    function(module2, __unused_webpack_exports, __webpack_require__2) {
+    (function(module2, __unused_webpack_exports, __webpack_require__2) {
       var BaseTokenizer = __webpack_require__2(9).Tokenizer;
       var BASETOKEN = __webpack_require__2(9).TOKEN;
       var Directives = __webpack_require__2(13).Directives;
@@ -9426,7 +9426,7 @@ var legacy_beautify_html;
       };
       module2.exports.Tokenizer = Tokenizer;
       module2.exports.TOKEN = TOKEN;
-    }
+    })
     /******/
   ];
   var __webpack_module_cache__ = {};
@@ -9713,10 +9713,10 @@ var LIB;
       return -1 === r3 || -1 === i2 || 0 === s2 || 1 === s2 && r3 === i2 - 1 && r3 === n3 + 1 ? "" : t4.slice(r3, i2);
     }, format: function(t4) {
       if (null === t4 || "object" != typeof t4) throw new TypeError('The "pathObject" argument must be of type Object. Received type ' + typeof t4);
-      return function(t5, e3) {
+      return (function(t5, e3) {
         var r3 = e3.dir || e3.root, n3 = e3.base || (e3.name || "") + (e3.ext || "");
         return r3 ? r3 === e3.root ? r3 + n3 : r3 + "/" + n3 : n3;
-      }(0, t4);
+      })(0, t4);
     }, parse: function(t4) {
       e2(t4);
       var r3 = { root: "", dir: "", base: "", ext: "", name: "" };
@@ -9771,9 +9771,9 @@ var LIB;
     query;
     fragment;
     constructor(t3, e2, r2, n2, i2, o2 = false) {
-      "object" == typeof t3 ? (this.scheme = t3.scheme || c, this.authority = t3.authority || c, this.path = t3.path || c, this.query = t3.query || c, this.fragment = t3.fragment || c) : (this.scheme = /* @__PURE__ */ function(t4, e3) {
+      "object" == typeof t3 ? (this.scheme = t3.scheme || c, this.authority = t3.authority || c, this.path = t3.path || c, this.query = t3.query || c, this.fragment = t3.fragment || c) : (this.scheme = /* @__PURE__ */ (function(t4, e3) {
         return t4 || e3 ? t4 : "file";
-      }(t3, o2), this.authority = e2 || c, this.path = function(t4, e3) {
+      })(t3, o2), this.authority = e2 || c, this.path = (function(t4, e3) {
         switch (t4) {
           case "https":
           case "http":
@@ -9781,7 +9781,7 @@ var LIB;
             e3 ? e3[0] !== f && (e3 = f + e3) : e3 = f;
         }
         return e3;
-      }(this.scheme, r2 || c), this.query = n2 || c, this.fragment = i2 || c, a(this, o2));
+      })(this.scheme, r2 || c), this.query = n2 || c, this.fragment = i2 || c, a(this, o2));
     }
     get fsPath() {
       return v(this, false);
@@ -9897,12 +9897,12 @@ var LIB;
   }
   const A = /(%[0-9A-Za-z][0-9A-Za-z])+/g;
   function w(t3) {
-    return t3.match(A) ? t3.replace(A, (t4) => C(t4)) : t3;
+    return t3.match(A) ? t3.replace(A, ((t4) => C(t4))) : t3;
   }
   var x = r(975);
   const P = x.posix || x, _ = "/";
   var I;
-  !function(t3) {
+  !(function(t3) {
     t3.joinPath = function(t4, ...e2) {
       return t4.with({ path: P.join(t4.path, ...e2) });
     }, t3.resolvePath = function(t4, ...e2) {
@@ -9919,7 +9919,7 @@ var LIB;
     }, t3.extname = function(t4) {
       return P.extname(t4.path);
     };
-  }(I || (I = {})), LIB = n;
+  })(I || (I = {})), LIB = n;
 })();
 var { URI: URI2, Utils } = LIB;
 
@@ -22597,7 +22597,7 @@ module.exports = (mod) => {
         info.project,
         new HtmlTemplateLanguageService(),
         {
-          tags: ["$temp", "$chunk"],
+          tags: ["html", "$chunk"],
           enableForStringWithSubstitutions: true
         }
       );
